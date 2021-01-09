@@ -35,6 +35,7 @@ public class TopUp extends AppCompatActivity {
         editor.apply();
         Toast.makeText(this,"Top Up Success!", Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(this, MainActivity.class);
+        intent.putExtra("saldo", currSaldo);
         startActivity(intent);
     }
 }

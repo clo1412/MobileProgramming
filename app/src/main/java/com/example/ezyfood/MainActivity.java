@@ -16,14 +16,14 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private int currSaldo=0;
+    private int currSaldo = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         TextView saldo = findViewById(R.id.txtSaldo);
-        SharedPreferences topUp = getSharedPreferences("topUp", MODE_WORLD_READABLE);
-        currSaldo = topUp.getInt("saldo", 0);
+        Intent intent = getIntent();
+        currSaldo = intent.getIntExtra("saldo", 0);
         if(currSaldo!=0)
             saldo.setText("Your Saldo: Rp " + currSaldo);
     }
