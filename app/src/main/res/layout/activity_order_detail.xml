@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="#3dc1d3"
+    tools:context=".OrderDetail">
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_marginBottom="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Drink Detail"
+            android:textSize="40dp"
+            android:textColor="#fff"
+            android:fontFamily="serif"/>
+
+        <LinearLayout
+            android:layout_marginBottom="30dp"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/prodImage"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/txtMenuName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:text="Air Mineral"
+                android:textSize="30dp"/>
+
+            <TextView
+                android:id="@+id/txtPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:text="Rp. 123"
+                android:textSize="30dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btnMin"
+                android:layout_marginRight="30dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:text="-"
+                android:textSize="30dp"
+                android:background="@drawable/border2"
+                android:onClick="btnMinOnClick"/>
+
+            <TextView
+                android:id="@+id/qty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="30dp"
+                android:textColor="#fff"/>
+
+            <Button
+                android:id="@+id/btnPlus"
+                android:layout_marginLeft="30dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:text="+"
+                android:textSize="30dp"
+                android:background="@drawable/border2"
+                android:onClick="btnPlusOnClick"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnCart"
+            android:layout_marginTop="40dp"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:text="Add to Cart"
+            android:textColor="#fff"
+            android:background="@drawable/border"
+            android:onClick="btnAddOnClick"/>
+
+        <Button
+            android:id="@+id/btnOrderMore"
+            android:layout_marginTop="20dp"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:text="Order More"
+            android:textColor="#fff"
+            android:background="@drawable/border"
+            android:onClick="btnOrderMoreOnClick"/>
+
+    </LinearLayout>
+
+</LinearLayout>
